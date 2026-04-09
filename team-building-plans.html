@@ -117,28 +117,20 @@
             overflow: hidden;
             background: linear-gradient(135deg, #e0e0e0, #f5f5f5);
             position: relative;
-            cursor: pointer;
             transition: transform 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         
         .photo-item:hover {
             transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
         
         .photo-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-        }
-        
-        .photo-item .placeholder {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2em;
-            color: #999;
+            display: block;
         }
         
         .plan-body {
@@ -405,15 +397,15 @@
                 <div class="photo-gallery">
                     
             <div class="photo-item">
-                <img src="https://p0.meituan.net/dpclubimg/9a8f7c3e5d2b1a4f6c8e0d9b7a5c3e1f.jpg" alt="曼芯馆艺术餐厅" onerror="this.parentElement.innerHTML='<div class=placeholder>📷</div>'">
+                <img src="https://placehold.co/400x300/E8B4B8/333333?text=曼芯馆·艺术展厅" alt="曼芯馆艺术餐厅" loading="lazy">
             </div>
         
             <div class="photo-item">
-                <img src="https://p1.meituan.net/dpclubimg/7b6c5d4e3f2a1b0c9d8e7f6a5b4c3d2e.jpg" alt="曼芯馆艺术餐厅" onerror="this.parentElement.innerHTML='<div class=placeholder>📷</div>'">
+                <img src="https://placehold.co/400x300/F0C4C8/333333?text=曼芯馆·包间" alt="曼芯馆艺术餐厅" loading="lazy">
             </div>
         
             <div class="photo-item">
-                <img src="https://p2.meituan.net/dpclubimg/5c4d3e2f1a0b9c8d7e6f5a4b3c2d1e0f.jpg" alt="曼芯馆艺术餐厅" onerror="this.parentElement.innerHTML='<div class=placeholder>📷</div>'">
+                <img src="https://placehold.co/400x300/D8A4A8/333333?text=曼芯馆·菜品" alt="曼芯馆艺术餐厅" loading="lazy">
             </div>
         
                 </div>
@@ -475,15 +467,15 @@
                 <div class="photo-gallery">
                     
             <div class="photo-item">
-                <img src="https://p0.meituan.net/dpclubimg/3e2f1a0b9c8d7e6f5a4b3c2d1e0f9a8b.jpg" alt="圆苑酒家（浦江店）" onerror="this.parentElement.innerHTML='<div class=placeholder>📷</div>'">
+                <img src="https://placehold.co/400x300/C9A87B/333333?text=圆苑酒家·大厅" alt="圆苑酒家（浦江店）" loading="lazy">
             </div>
         
             <div class="photo-item">
-                <img src="https://p1.meituan.net/dpclubimg/1a0b9c8d7e6f5a4b3c2d1e0f9a8b7c6d.jpg" alt="圆苑酒家（浦江店）" onerror="this.parentElement.innerHTML='<div class=placeholder>📷</div>'">
+                <img src="https://placehold.co/400x300/D4B588/333333?text=圆苑酒家·包间" alt="圆苑酒家（浦江店）" loading="lazy">
             </div>
         
             <div class="photo-item">
-                <img src="https://p2.meituan.net/dpclubimg/9c8d7e6f5a4b3c2d1e0f9a8b7c6d5e4f.jpg" alt="圆苑酒家（浦江店）" onerror="this.parentElement.innerHTML='<div class=placeholder>📷</div>'">
+                <img src="https://placehold.co/400x300/BF986B/333333?text=圆苑酒家·招牌菜" alt="圆苑酒家（浦江店）" loading="lazy">
             </div>
         
                 </div>
@@ -545,15 +537,15 @@
                 <div class="photo-gallery">
                     
             <div class="photo-item">
-                <img src="https://p0.meituan.net/dpclubimg/7e6f5a4b3c2d1e0f9a8b7c6d5e4f3a2b.jpg" alt="苏浙汇（浦江华侨城店）" onerror="this.parentElement.innerHTML='<div class=placeholder>📷</div>'">
+                <img src="https://placehold.co/400x300/9B7B8B/FFFFFF?text=苏浙汇·宴会厅" alt="苏浙汇（浦江华侨城店）" loading="lazy">
             </div>
         
             <div class="photo-item">
-                <img src="https://p1.meituan.net/dpclubimg/5a4b3c2d1e0f9a8b7c6d5e4f3a2b1c0d.jpg" alt="苏浙汇（浦江华侨城店）" onerror="this.parentElement.innerHTML='<div class=placeholder>📷</div>'">
+                <img src="https://placehold.co/400x300/A88898/FFFFFF?text=苏浙汇·包间" alt="苏浙汇（浦江华侨城店）" loading="lazy">
             </div>
         
             <div class="photo-item">
-                <img src="https://p2.meituan.net/dpclubimg/3c2d1e0f9a8b7c6d5e4f3a2b1c0d9e8f.jpg" alt="苏浙汇（浦江华侨城店）" onerror="this.parentElement.innerHTML='<div class=placeholder>📷</div>'">
+                <img src="https://placehold.co/400x300/8E6B7B/FFFFFF?text=苏浙汇·环境" alt="苏浙汇（浦江华侨城店）" loading="lazy">
             </div>
         
                 </div>
@@ -691,7 +683,7 @@
         <div class="footer">
             <p>生成时间：2026 年 4 月 9 日 | 数据来源：大众点评排行榜</p>
             <p>注：价格和评分仅供参考，实际以餐厅为准</p>
-            <p>图片仅供参考，请以实际场地为准</p>
+            <p>图片为场地示意图，请以实际场地为准</p>
         </div>
     </div>
 </body>
