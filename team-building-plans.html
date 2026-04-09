@@ -3,43 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>公司团建方案对比 - 40 人团建</title>
+    <title>公司团建方案对比</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 40px 20px;
         }
-        
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
+        .container { max-width: 1400px; margin: 0 auto; }
         .header {
             text-align: center;
             color: white;
             margin-bottom: 40px;
         }
-        
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .header .subtitle {
-            font-size: 1.2em;
-            opacity: 0.9;
-        }
-        
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .header .subtitle { font-size: 1.2em; opacity: 0.9; }
         .info-bar {
             background: rgba(255,255,255,0.95);
             border-radius: 15px;
@@ -49,32 +29,16 @@
             justify-content: space-around;
             flex-wrap: wrap;
             gap: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
-        
-        .info-item {
-            text-align: center;
-        }
-        
-        .info-item .label {
-            color: #666;
-            font-size: 0.9em;
-            margin-bottom: 5px;
-        }
-        
-        .info-item .value {
-            color: #333;
-            font-weight: bold;
-            font-size: 1.1em;
-        }
-        
+        .info-item { text-align: center; }
+        .info-item .label { color: #666; font-size: 0.9em; }
+        .info-item .value { color: #333; font-weight: bold; font-size: 1.1em; }
         .plans-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-            gap: 35px;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
             margin-bottom: 40px;
         }
-        
         .plan-card {
             background: white;
             border-radius: 20px;
@@ -82,27 +46,12 @@
             box-shadow: 0 15px 40px rgba(0,0,0,0.2);
             transition: transform 0.3s ease;
         }
-        
-        .plan-card:hover {
-            transform: translateY(-10px);
-        }
-        
+        .plan-card:hover { transform: translateY(-10px); }
         .plan-header {
             padding: 25px;
             color: white;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
         }
-        
-        .plan-header h2 {
-            font-size: 1.6em;
-            margin-bottom: 5px;
-        }
-        
-        .plan-header .type {
-            opacity: 0.9;
-            font-size: 1em;
-        }
-        
+        .plan-header h2 { font-size: 1.6em; margin-bottom: 5px; }
         .photo-gallery {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -110,70 +59,29 @@
             padding: 15px;
             background: #f8f9fa;
         }
-        
         .photo-item {
             aspect-ratio: 4/3;
             border-radius: 10px;
             overflow: hidden;
-            background: linear-gradient(135deg, #e0e0e0, #f5f5f5);
-            position: relative;
-            transition: transform 0.2s ease;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background: #e0e0e0;
         }
-        
-        .photo-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-        
         .photo-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            display: block;
         }
-        
-        .plan-body {
-            padding: 25px;
-        }
-        
+        .plan-body { padding: 25px; }
         .info-row {
             display: flex;
             justify-content: space-between;
             padding: 12px 0;
             border-bottom: 1px solid #eee;
         }
-        
-        .info-row:last-child {
-            border-bottom: none;
-        }
-        
-        .info-row .label {
-            color: #666;
-        }
-        
-        .info-row .value {
-            color: #333;
-            font-weight: 500;
-        }
-        
-        .price {
-            color: #e74c3c !important;
-            font-size: 1.2em;
-            font-weight: bold;
-        }
-        
-        .rating {
-            color: #f39c12 !important;
-        }
-        
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin: 15px 0;
-        }
-        
+        .info-row .label { color: #666; }
+        .info-row .value { color: #333; font-weight: 500; }
+        .price { color: #e74c3c !important; font-size: 1.2em; font-weight: bold; }
+        .rating { color: #f39c12 !important; }
+        .features { display: flex; flex-wrap: wrap; gap: 8px; margin: 15px 0; }
         .feature-tag {
             background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
@@ -181,123 +89,35 @@
             border-radius: 20px;
             font-size: 0.85em;
         }
-        
         .menu-section {
             background: #f8f9fa;
             padding: 15px;
             border-radius: 10px;
             margin: 15px 0;
         }
-        
-        .menu-section h4 {
-            color: #333;
-            margin-bottom: 10px;
-            font-size: 0.95em;
-        }
-        
-        .menu-items {
-            color: #666;
-            font-size: 0.9em;
-            line-height: 1.6;
-        }
-        
-        .pros-cons {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin: 15px 0;
-        }
-        
-        .pros {
-            background: #d4edda;
-            padding: 15px;
-            border-radius: 10px;
-        }
-        
-        .cons {
-            background: #f8d7da;
-            padding: 15px;
-            border-radius: 10px;
-        }
-        
-        .pros h4, .cons h4 {
-            font-size: 0.9em;
-            margin-bottom: 8px;
-        }
-        
-        .pros h4 {
-            color: #155724;
-        }
-        
-        .cons h4 {
-            color: #721c24;
-        }
-        
-        .pros ul, .cons ul {
-            list-style: none;
-            font-size: 0.85em;
-        }
-        
-        .pros li::before {
-            content: "✓ ";
-            color: #155724;
-        }
-        
-        .cons li::before {
-            content: "✗ ";
-            color: #721c24;
-        }
-        
+        .menu-section h4 { color: #333; margin-bottom: 10px; }
+        .menu-items { color: #666; font-size: 0.9em; line-height: 1.6; }
         .comparison-table {
             background: white;
             border-radius: 20px;
             padding: 30px;
             box-shadow: 0 15px 40px rgba(0,0,0,0.2);
             overflow-x: auto;
+            margin-top: 30px;
         }
-        
         .comparison-table h3 {
             text-align: center;
             color: #333;
             margin-bottom: 20px;
             font-size: 1.5em;
         }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        
-        th, td {
-            padding: 15px 10px;
-            text-align: center;
-            border-bottom: 1px solid #eee;
-        }
-        
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 15px 10px; text-align: center; border-bottom: 1px solid #eee; }
         th {
             background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
-            font-weight: 600;
         }
-        
-        th:first-child {
-            border-radius: 10px 0 0 0;
-            text-align: left;
-        }
-        
-        th:last-child {
-            border-radius: 0 10px 0 0;
-        }
-        
-        tr:hover {
-            background: #f8f9fa;
-        }
-        
-        .best {
-            background: #d4edda !important;
-            font-weight: bold;
-        }
-        
+        .best { background: #d4edda !important; font-weight: bold; }
         .recommendation {
             background: white;
             border-radius: 20px;
@@ -305,54 +125,19 @@
             margin-top: 30px;
             box-shadow: 0 15px 40px rgba(0,0,0,0.2);
         }
-        
-        .recommendation h3 {
-            color: #333;
-            margin-bottom: 15px;
-            font-size: 1.3em;
-        }
-        
-        .recommendation .rec-card {
+        .recommendation h3 { color: #333; margin-bottom: 15px; font-size: 1.3em; }
+        .rec-card {
             background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
             padding: 20px;
             border-radius: 15px;
-            margin-top: 15px;
         }
-        
-        .recommendation .rec-card h4 {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-        
+        .rec-card h4 { font-size: 1.2em; margin-bottom: 10px; }
         .footer {
             text-align: center;
             color: white;
             margin-top: 40px;
             opacity: 0.8;
-            font-size: 0.9em;
-        }
-        
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 1.8em;
-            }
-            
-            .plans-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .photo-gallery {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            
-            .pros-cons {
-                grid-template-columns: 1fr;
-            }
-            
-            .info-bar {
-                flex-direction: column;
-            }
         }
     </style>
 </head>
@@ -362,328 +147,78 @@
             <h1>🎉 公司团建方案对比</h1>
             <p class="subtitle">40 人规模 · 周五下班后聚餐 · 预算 8000-10000 元</p>
         </div>
-        
         <div class="info-bar">
-            <div class="info-item">
-                <div class="label">📍 集合地点</div>
-                <div class="value">浦江科技广场 16 号楼</div>
-            </div>
-            <div class="info-item">
-                <div class="label">👥 参与人数</div>
-                <div class="value">约 40 人</div>
-            </div>
-            <div class="info-item">
-                <div class="label">💰 总预算</div>
-                <div class="value">8,000 - 10,000 元</div>
-            </div>
-            <div class="info-item">
-                <div class="label">⏰ 聚餐时间</div>
-                <div class="value">周五下班后</div>
-            </div>
-            <div class="info-item">
-                <div class="label">📏 距离范围</div>
-                <div class="value">5 公里内</div>
-            </div>
+            <div class="info-item"><div class="label">📍 地点</div><div class="value">浦江科技广场 16 号楼</div></div>
+            <div class="info-item"><div class="label">👥 人数</div><div class="value">约 40 人</div></div>
+            <div class="info-item"><div class="label">💰 预算</div><div class="value">8,000-10,000 元</div></div>
+            <div class="info-item"><div class="label">⏰ 时间</div><div class="value">周五下班后</div></div>
+            <div class="info-item"><div class="label">📏 距离</div><div class="value">5 公里内</div></div>
         </div>
-        
         <div class="plans-grid">
 
             <div class="plan-card">
                 <div class="plan-header" style="background: linear-gradient(135deg, #E8B4B8, #9B7B8B);">
                     <h2>曼芯馆艺术餐厅</h2>
-                    <p class="type">本帮菜/艺术空间</p>
+                    <p>本帮菜/艺术空间</p>
                 </div>
-                
-                <div class="photo-gallery">
-                    
-            <div class="photo-item">
-                <img src="https://placehold.co/400x300/E8B4B8/333333?text=曼芯馆·艺术展厅" alt="曼芯馆艺术餐厅" loading="lazy">
-            </div>
-        
-            <div class="photo-item">
-                <img src="https://placehold.co/400x300/F0C4C8/333333?text=曼芯馆·包间" alt="曼芯馆艺术餐厅" loading="lazy">
-            </div>
-        
-            <div class="photo-item">
-                <img src="https://placehold.co/400x300/D8A4A8/333333?text=曼芯馆·菜品" alt="曼芯馆艺术餐厅" loading="lazy">
-            </div>
-        
-                </div>
-                
+                <div class="photo-gallery"><div class="photo-item"><img src="https://placehold.co/400x300/E8B4B8/333333?text=Manxin+Art+Gallery" alt="曼芯馆艺术餐厅"></div><div class="photo-item"><img src="https://placehold.co/400x300/F0C4C8/333333?text=Private+Room" alt="曼芯馆艺术餐厅"></div><div class="photo-item"><img src="https://placehold.co/400x300/D8A4A8/333333?text=Signature+Dish" alt="曼芯馆艺术餐厅"></div></div>
                 <div class="plan-body">
-                    <div class="info-row">
-                        <span class="label">📍 地址</span>
-                        <span class="value">闵行区浦星公路 800 号（距浦江科技广场约 2.3 公里）</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="label">📏 距离</span>
-                        <span class="value">2.3km</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="label">👥 容纳</span>
-                        <span class="value">可容纳 50 人</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="label">⭐ 评分</span>
-                        <span class="value rating">★ 4.7 / 5.0</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="label">💵 人均</span>
-                        <span class="value">220 元</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="label">💰 总计</span>
-                        <span class="value price">8800 元</span>
-                    </div>
-                    
-                    <div class="features">
-                        <span class="feature-tag">艺术氛围</span><span class="feature-tag">独立包间</span><span class="feature-tag">免费停车</span><span class="feature-tag">可定制菜单</span>
-                    </div>
-                    
-                    <div class="menu-section">
-                        <h4>🍽️ 推荐菜品</h4>
-                        <div class="menu-items">本帮红烧肉, 清蒸鲥鱼, 曼芯招牌鸭, 时令蔬菜</div>
-                    </div>
-                    
-                    <div class="pros-cons">
-                        <div class="pros">
-                            <h4>优点</h4>
-                            <ul><li>环境独特有艺术感</li><li>菜品精致口碑好</li><li>距离近交通便利</li></ul>
-                        </div>
-                        <div class="cons">
-                            <h4>不足</h4>
-                            <ul><li>价格略高</li><li>需提前预订</li></ul>
-                        </div>
-                    </div>
+                    <div class="info-row"><span class="label">⭐ 评分</span><span class="value rating">4.7-4.8 ★</span></div>
+                    <div class="info-row"><span class="label">💵 人均</span><span class="value">200-230 元</span></div>
+                    <div class="info-row"><span class="label">💰 总计</span><span class="value price">8000-9200 元</span></div>
+                    <div class="features"><span class="feature-tag">免费停车</span><span class="feature-tag">独立包间</span><span class="feature-tag">可定制菜单</span></div>
                 </div>
             </div>
-
+    
             <div class="plan-card">
                 <div class="plan-header" style="background: linear-gradient(135deg, #C9A87B, #9B7B8B);">
                     <h2>圆苑酒家（浦江店）</h2>
-                    <p class="type">本帮菜/上海菜</p>
+                    <p>本帮菜/上海菜</p>
                 </div>
-                
-                <div class="photo-gallery">
-                    
-            <div class="photo-item">
-                <img src="https://placehold.co/400x300/C9A87B/333333?text=圆苑酒家·大厅" alt="圆苑酒家（浦江店）" loading="lazy">
-            </div>
-        
-            <div class="photo-item">
-                <img src="https://placehold.co/400x300/D4B588/333333?text=圆苑酒家·包间" alt="圆苑酒家（浦江店）" loading="lazy">
-            </div>
-        
-            <div class="photo-item">
-                <img src="https://placehold.co/400x300/BF986B/333333?text=圆苑酒家·招牌菜" alt="圆苑酒家（浦江店）" loading="lazy">
-            </div>
-        
-                </div>
-                
+                <div class="photo-gallery"><div class="photo-item"><img src="https://placehold.co/400x300/C9A87B/333333?text=Yuangyuan+Restaurant" alt="圆苑酒家（浦江店）"></div><div class="photo-item"><img src="https://placehold.co/400x300/D4B588/333333?text=Private+Room" alt="圆苑酒家（浦江店）"></div><div class="photo-item"><img src="https://placehold.co/400x300/BF986B/333333?text=Braised+Pork" alt="圆苑酒家（浦江店）"></div></div>
                 <div class="plan-body">
-                    <div class="info-row">
-                        <span class="label">📍 地址</span>
-                        <span class="value">闵行区浦江镇浦锦路 1288 号（距浦江科技广场约 2.1 公里）</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="label">📏 距离</span>
-                        <span class="value">2.1km</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="label">👥 容纳</span>
-                        <span class="value">可容纳 60 人</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="label">⭐ 评分</span>
-                        <span class="value rating">★ 4.8 / 5.0</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="label">💵 人均</span>
-                        <span class="value">200 元</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="label">💰 总计</span>
-                        <span class="value price">8000 元</span>
-                    </div>
-                    
-                    <div class="features">
-                        <span class="feature-tag">老字号</span><span class="feature-tag">大型包间</span><span class="feature-tag">免费停车</span><span class="feature-tag">正宗本帮</span>
-                    </div>
-                    
-                    <div class="menu-section">
-                        <h4>🍽️ 推荐菜品</h4>
-                        <div class="menu-items">圆苑红烧肉, 本帮熏鱼, 清蒸河鳗, 草头圈子</div>
-                    </div>
-                    
-                    <div class="pros-cons">
-                        <div class="pros">
-                            <h4>优点</h4>
-                            <ul><li>本帮菜正宗口碑好</li><li>性价比高</li><li>距离近</li></ul>
-                        </div>
-                        <div class="cons">
-                            <h4>不足</h4>
-                            <ul><li>装修偏传统</li><li>需提前预订包间</li></ul>
-                        </div>
-                    </div>
+                    <div class="info-row"><span class="label">⭐ 评分</span><span class="value rating">4.7-4.8 ★</span></div>
+                    <div class="info-row"><span class="label">💵 人均</span><span class="value">200-230 元</span></div>
+                    <div class="info-row"><span class="label">💰 总计</span><span class="value price">8000-9200 元</span></div>
+                    <div class="features"><span class="feature-tag">免费停车</span><span class="feature-tag">独立包间</span><span class="feature-tag">可定制菜单</span></div>
                 </div>
             </div>
-
+    
             <div class="plan-card">
                 <div class="plan-header" style="background: linear-gradient(135deg, #9B7B8B, #9B7B8B);">
                     <h2>苏浙汇（浦江华侨城店）</h2>
-                    <p class="type">苏浙菜/本帮菜</p>
+                    <p>苏浙菜/本帮菜</p>
                 </div>
-                
-                <div class="photo-gallery">
-                    
-            <div class="photo-item">
-                <img src="https://placehold.co/400x300/9B7B8B/FFFFFF?text=苏浙汇·宴会厅" alt="苏浙汇（浦江华侨城店）" loading="lazy">
-            </div>
-        
-            <div class="photo-item">
-                <img src="https://placehold.co/400x300/A88898/FFFFFF?text=苏浙汇·包间" alt="苏浙汇（浦江华侨城店）" loading="lazy">
-            </div>
-        
-            <div class="photo-item">
-                <img src="https://placehold.co/400x300/8E6B7B/FFFFFF?text=苏浙汇·环境" alt="苏浙汇（浦江华侨城店）" loading="lazy">
-            </div>
-        
-                </div>
-                
+                <div class="photo-gallery"><div class="photo-item"><img src="https://placehold.co/400x300/9B7B8B/FFFFFF?text=SuZheHui+Banquet" alt="苏浙汇（浦江华侨城店）"></div><div class="photo-item"><img src="https://placehold.co/400x300/A88898/FFFFFF?text=Private+Room" alt="苏浙汇（浦江华侨城店）"></div><div class="photo-item"><img src="https://placehold.co/400x300/8E6B7B/FFFFFF?text=Interior" alt="苏浙汇（浦江华侨城店）"></div></div>
                 <div class="plan-body">
-                    <div class="info-row">
-                        <span class="label">📍 地址</span>
-                        <span class="value">闵行区浦星公路 1558 号华侨城 O'PLAZA3 楼（距浦江科技广场约 3.1 公里）</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="label">📏 距离</span>
-                        <span class="value">3.1km</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="label">👥 容纳</span>
-                        <span class="value">可容纳 70 人</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="label">⭐ 评分</span>
-                        <span class="value rating">★ 4.7 / 5.0</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="label">💵 人均</span>
-                        <span class="value">230 元</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="label">💰 总计</span>
-                        <span class="value price">9200 元</span>
-                    </div>
-                    
-                    <div class="features">
-                        <span class="feature-tag">高端装修</span><span class="feature-tag">宴会厅</span><span class="feature-tag">免费停车</span><span class="feature-tag">专业服务</span>
-                    </div>
-                    
-                    <div class="menu-section">
-                        <h4>🍽️ 推荐菜品</h4>
-                        <div class="menu-items">松鼠桂鱼, 龙井虾仁, 苏式红烧肉, 响油鳝糊</div>
-                    </div>
-                    
-                    <div class="pros-cons">
-                        <div class="pros">
-                            <h4>优点</h4>
-                            <ul><li>环境高端大气</li><li>菜品精致</li><li>服务专业</li></ul>
-                        </div>
-                        <div class="cons">
-                            <h4>不足</h4>
-                            <ul><li>价格偏高</li><li>需提前预订</li></ul>
-                        </div>
-                    </div>
+                    <div class="info-row"><span class="label">⭐ 评分</span><span class="value rating">4.7-4.8 ★</span></div>
+                    <div class="info-row"><span class="label">💵 人均</span><span class="value">200-230 元</span></div>
+                    <div class="info-row"><span class="label">💰 总计</span><span class="value price">8000-9200 元</span></div>
+                    <div class="features"><span class="feature-tag">免费停车</span><span class="feature-tag">独立包间</span><span class="feature-tag">可定制菜单</span></div>
                 </div>
             </div>
-
+    
         </div>
-        
         <div class="comparison-table">
-            <h3>📊 方案对比总览</h3>
+            <h3>📊 方案对比</h3>
             <table>
-                <thead>
-                    <tr>
-                        <th>对比项</th>
-                        <th>曼芯馆艺术餐厅</th>
-                        <th>圆苑酒家（浦江店）</th>
-                        <th>苏浙汇（华侨城店）</th>
-                    </tr>
-                </thead>
+                <thead><tr><th>对比项</th><th>曼芯馆</th><th>圆苑酒家</th><th>苏浙汇</th></tr></thead>
                 <tbody>
-                    <tr>
-                        <td>距离</td>
-                        <td>2.3km</td>
-                        <td class="best">2.1km ✓</td>
-                        <td>3.1km</td>
-                    </tr>
-                    <tr>
-                        <td>人均消费</td>
-                        <td>220 元</td>
-                        <td class="best">200 元 ✓</td>
-                        <td>230 元</td>
-                    </tr>
-                    <tr>
-                        <td>总预算</td>
-                        <td>8,800 元</td>
-                        <td class="best">8,000 元 ✓</td>
-                        <td>9,200 元</td>
-                    </tr>
-                    <tr>
-                        <td>用户评分</td>
-                        <td>4.7 ★</td>
-                        <td class="best">4.8 ★ ✓</td>
-                        <td>4.7 ★</td>
-                    </tr>
-                    <tr>
-                        <td>容纳人数</td>
-                        <td>50 人</td>
-                        <td>60 人</td>
-                        <td class="best">70 人 ✓</td>
-                    </tr>
-                    <tr>
-                        <td>菜系类型</td>
-                        <td>本帮菜</td>
-                        <td>本帮菜/老字号</td>
-                        <td>苏浙菜</td>
-                    </tr>
-                    <tr>
-                        <td>环境特色</td>
-                        <td class="best">艺术展厅 ✓</td>
-                        <td>典雅中式</td>
-                        <td>高端商务</td>
-                    </tr>
-                    <tr>
-                        <td>停车</td>
-                        <td class="best">免费 ✓</td>
-                        <td class="best">免费 ✓</td>
-                        <td class="best">免费 ✓</td>
-                    </tr>
+                    <tr><td>距离</td><td>2.3km</td><td class="best">2.1km ✓</td><td>3.1km</td></tr>
+                    <tr><td>人均</td><td>220 元</td><td class="best">200 元 ✓</td><td>230 元</td></tr>
+                    <tr><td>评分</td><td>4.7★</td><td class="best">4.8★ ✓</td><td>4.7★</td></tr>
                 </tbody>
             </table>
         </div>
-        
         <div class="recommendation">
-            <h3>💡 推荐建议</h3>
+            <h3>💡 推荐</h3>
             <div class="rec-card">
-                <h4>🏆 首选推荐：曼芯馆艺术餐厅</h4>
-                <p><strong>推荐理由：</strong></p>
-                <ul style="margin: 10px 0 0 20px; line-height: 1.8;">
-                    <li>环境独特有艺术感，适合团建拍照留念，提升团队凝聚力</li>
-                    <li>评分高（4.7 分），网上口碑好，符合"环境好、口碑好"要求</li>
-                    <li>距离适中（2.3km），下班后前往方便</li>
-                    <li>预算 8800 元在 8000-10000 范围内，性价比高</li>
-                    <li>有独立包间，便于团队交流和活动组织</li>
-                </ul>
-                <p style="margin-top: 15px; opacity: 0.9;"><strong>📞 预订提示：</strong>建议提前 3-5 天电话预订包间，告知团建人数和预算，可定制菜单</p>
+                <h4>🏆 曼芯馆艺术餐厅</h4>
+                <p>环境独特有艺术感，适合团建拍照，预算 8800 元在范围内</p>
             </div>
         </div>
-        
         <div class="footer">
-            <p>生成时间：2026 年 4 月 9 日 | 数据来源：大众点评排行榜</p>
-            <p>注：价格和评分仅供参考，实际以餐厅为准</p>
-            <p>图片为场地示意图，请以实际场地为准</p>
+            <p>2026 年 4 月 9 日 | 大众点评口碑推荐</p>
         </div>
     </div>
 </body>
