@@ -13,11 +13,7 @@
             padding: 40px 20px;
         }
         .container { max-width: 1400px; margin: 0 auto; }
-        .header {
-            text-align: center;
-            color: white;
-            margin-bottom: 40px;
-        }
+        .header { text-align: center; color: white; margin-bottom: 40px; }
         .header h1 { font-size: 2.5em; margin-bottom: 10px; }
         .header .subtitle { font-size: 1.2em; opacity: 0.9; }
         .info-bar {
@@ -47,11 +43,9 @@
             transition: transform 0.3s ease;
         }
         .plan-card:hover { transform: translateY(-10px); }
-        .plan-header {
-            padding: 25px;
-            color: white;
-        }
+        .plan-header { padding: 25px; color: white; }
         .plan-header h2 { font-size: 1.6em; margin-bottom: 5px; }
+        .plan-header p { opacity: 0.9; }
         .photo-gallery {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -64,6 +58,7 @@
             border-radius: 10px;
             overflow: hidden;
             background: #e0e0e0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         .photo-item img {
             width: 100%;
@@ -89,14 +84,6 @@
             border-radius: 20px;
             font-size: 0.85em;
         }
-        .menu-section {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 10px;
-            margin: 15px 0;
-        }
-        .menu-section h4 { color: #333; margin-bottom: 10px; }
-        .menu-items { color: #666; font-size: 0.9em; line-height: 1.6; }
         .comparison-table {
             background: white;
             border-radius: 20px;
@@ -133,6 +120,7 @@
             border-radius: 15px;
         }
         .rec-card h4 { font-size: 1.2em; margin-bottom: 10px; }
+        .rec-card ul { margin: 10px 0 0 20px; line-height: 1.8; }
         .footer {
             text-align: center;
             color: white;
@@ -155,70 +143,112 @@
             <div class="info-item"><div class="label">📏 距离</div><div class="value">5 公里内</div></div>
         </div>
         <div class="plans-grid">
-
+            <!-- 曼芯馆 -->
             <div class="plan-card">
                 <div class="plan-header" style="background: linear-gradient(135deg, #E8B4B8, #9B7B8B);">
-                    <h2>曼芯馆艺术餐厅</h2>
+                    <h2>🏆 曼芯馆艺术餐厅</h2>
                     <p>本帮菜/艺术空间</p>
                 </div>
-                <div class="photo-gallery"><div class="photo-item"><img src="https://placehold.co/400x300/E8B4B8/333333?text=Manxin+Art+Gallery" alt="曼芯馆艺术餐厅"></div><div class="photo-item"><img src="https://placehold.co/400x300/F0C4C8/333333?text=Private+Room" alt="曼芯馆艺术餐厅"></div><div class="photo-item"><img src="https://placehold.co/400x300/D8A4A8/333333?text=Signature+Dish" alt="曼芯馆艺术餐厅"></div></div>
+                <div class="photo-gallery">
+                    <div class="photo-item"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj4KICAgICAgICA8cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iI0U4QjRCOCIvPgogICAgICAgIDx0ZXh0IHg9IjIwMCIgeT0iMTQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMzMzMzMzIiBmb250LXNpemU9IjI0IiBmb250LWZhbWlseT0iQXJpYWwiPgogICAgICAgICAgICDmm7zoiq/ppobCt+iJuuacr+WxleWOhQogICAgICAgIDwvdGV4dD4KICAgICAgICA8dGV4dCB4PSIyMDAiIHk9IjE4MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzMzMzMzMyIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9IkFyaWFsIj4KICAgICAgICAgICAg5Zy65Zyw54Wn54mHCiAgICAgICAgPC90ZXh0PgogICAgPC9zdmc+" alt="曼芯馆"></div>
+                    <div class="photo-item"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj4KICAgICAgICA8cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iI0YwQzRDOCIvPgogICAgICAgIDx0ZXh0IHg9IjIwMCIgeT0iMTQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMzMzMzMzIiBmb250LXNpemU9IjI0IiBmb250LWZhbWlseT0iQXJpYWwiPgogICAgICAgICAgICDmm7zoiq/ppobCt+WMhemXtAogICAgICAgIDwvdGV4dD4KICAgICAgICA8dGV4dCB4PSIyMDAiIHk9IjE4MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzMzMzMzMyIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9IkFyaWFsIj4KICAgICAgICAgICAg5Zy65Zyw54Wn54mHCiAgICAgICAgPC90ZXh0PgogICAgPC9zdmc+" alt="曼芯馆"></div>
+                    <div class="photo-item"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj4KICAgICAgICA8cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iI0Q4QTRBOCIvPgogICAgICAgIDx0ZXh0IHg9IjIwMCIgeT0iMTQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMzMzMzMzIiBmb250LXNpemU9IjI0IiBmb250LWZhbWlseT0iQXJpYWwiPgogICAgICAgICAgICDmm7zoiq/ppobCt+iPnOWTgQogICAgICAgIDwvdGV4dD4KICAgICAgICA8dGV4dCB4PSIyMDAiIHk9IjE4MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzMzMzMzMyIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9IkFyaWFsIj4KICAgICAgICAgICAg5Zy65Zyw54Wn54mHCiAgICAgICAgPC90ZXh0PgogICAgPC9zdmc+" alt="曼芯馆"></div>
+                </div>
                 <div class="plan-body">
-                    <div class="info-row"><span class="label">⭐ 评分</span><span class="value rating">4.7-4.8 ★</span></div>
-                    <div class="info-row"><span class="label">💵 人均</span><span class="value">200-230 元</span></div>
-                    <div class="info-row"><span class="label">💰 总计</span><span class="value price">8000-9200 元</span></div>
-                    <div class="features"><span class="feature-tag">免费停车</span><span class="feature-tag">独立包间</span><span class="feature-tag">可定制菜单</span></div>
+                    <div class="info-row"><span class="label">📍 地址</span><span class="value">浦星公路 800 号</span></div>
+                    <div class="info-row"><span class="label">📏 距离</span><span class="value">2.3km</span></div>
+                    <div class="info-row"><span class="label">👥 容纳</span><span class="value">50 人</span></div>
+                    <div class="info-row"><span class="label">⭐ 评分</span><span class="value rating">4.7 ★</span></div>
+                    <div class="info-row"><span class="label">💵 人均</span><span class="value">220 元</span></div>
+                    <div class="info-row"><span class="label">💰 总计</span><span class="value price">8,800 元</span></div>
+                    <div class="features">
+                        <span class="feature-tag">艺术氛围</span>
+                        <span class="feature-tag">独立包间</span>
+                        <span class="feature-tag">免费停车</span>
+                    </div>
                 </div>
             </div>
-    
+            <!-- 圆苑酒家 -->
             <div class="plan-card">
                 <div class="plan-header" style="background: linear-gradient(135deg, #C9A87B, #9B7B8B);">
                     <h2>圆苑酒家（浦江店）</h2>
-                    <p>本帮菜/上海菜</p>
+                    <p>本帮菜/老字号</p>
                 </div>
-                <div class="photo-gallery"><div class="photo-item"><img src="https://placehold.co/400x300/C9A87B/333333?text=Yuangyuan+Restaurant" alt="圆苑酒家（浦江店）"></div><div class="photo-item"><img src="https://placehold.co/400x300/D4B588/333333?text=Private+Room" alt="圆苑酒家（浦江店）"></div><div class="photo-item"><img src="https://placehold.co/400x300/BF986B/333333?text=Braised+Pork" alt="圆苑酒家（浦江店）"></div></div>
+                <div class="photo-gallery">
+                    <div class="photo-item"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj4KICAgICAgICA8cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iI0M5QTg3QiIvPgogICAgICAgIDx0ZXh0IHg9IjIwMCIgeT0iMTQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMzMzMzMzIiBmb250LXNpemU9IjI0IiBmb250LWZhbWlseT0iQXJpYWwiPgogICAgICAgICAgICDlnIboi5HphZLlrrbCt+Wkp+WOhQogICAgICAgIDwvdGV4dD4KICAgICAgICA8dGV4dCB4PSIyMDAiIHk9IjE4MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzMzMzMzMyIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9IkFyaWFsIj4KICAgICAgICAgICAg5Zy65Zyw54Wn54mHCiAgICAgICAgPC90ZXh0PgogICAgPC9zdmc+" alt="圆苑酒家"></div>
+                    <div class="photo-item"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj4KICAgICAgICA8cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iI0Q0QjU4OCIvPgogICAgICAgIDx0ZXh0IHg9IjIwMCIgeT0iMTQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMzMzMzMzIiBmb250LXNpemU9IjI0IiBmb250LWZhbWlseT0iQXJpYWwiPgogICAgICAgICAgICDlnIboi5HphZLlrrbCt+WMhemXtAogICAgICAgIDwvdGV4dD4KICAgICAgICA8dGV4dCB4PSIyMDAiIHk9IjE4MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzMzMzMzMyIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9IkFyaWFsIj4KICAgICAgICAgICAg5Zy65Zyw54Wn54mHCiAgICAgICAgPC90ZXh0PgogICAgPC9zdmc+" alt="圆苑酒家"></div>
+                    <div class="photo-item"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj4KICAgICAgICA8cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iI0JGOTg2QiIvPgogICAgICAgIDx0ZXh0IHg9IjIwMCIgeT0iMTQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMzMzMzMzIiBmb250LXNpemU9IjI0IiBmb250LWZhbWlseT0iQXJpYWwiPgogICAgICAgICAgICDlnIboi5HphZLlrrbCt+aLm+eJjOiPnAogICAgICAgIDwvdGV4dD4KICAgICAgICA8dGV4dCB4PSIyMDAiIHk9IjE4MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzMzMzMzMyIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9IkFyaWFsIj4KICAgICAgICAgICAg5Zy65Zyw54Wn54mHCiAgICAgICAgPC90ZXh0PgogICAgPC9zdmc+" alt="圆苑酒家"></div>
+                </div>
                 <div class="plan-body">
-                    <div class="info-row"><span class="label">⭐ 评分</span><span class="value rating">4.7-4.8 ★</span></div>
-                    <div class="info-row"><span class="label">💵 人均</span><span class="value">200-230 元</span></div>
-                    <div class="info-row"><span class="label">💰 总计</span><span class="value price">8000-9200 元</span></div>
-                    <div class="features"><span class="feature-tag">免费停车</span><span class="feature-tag">独立包间</span><span class="feature-tag">可定制菜单</span></div>
+                    <div class="info-row"><span class="label">📍 地址</span><span class="value">浦锦路 1288 号</span></div>
+                    <div class="info-row"><span class="label">📏 距离</span><span class="value">2.1km</span></div>
+                    <div class="info-row"><span class="label">👥 容纳</span><span class="value">60 人</span></div>
+                    <div class="info-row"><span class="label">⭐ 评分</span><span class="value rating">4.8 ★</span></div>
+                    <div class="info-row"><span class="label">💵 人均</span><span class="value">200 元</span></div>
+                    <div class="info-row"><span class="label">💰 总计</span><span class="value price">8,000 元</span></div>
+                    <div class="features">
+                        <span class="feature-tag">老字号</span>
+                        <span class="feature-tag">大型包间</span>
+                        <span class="feature-tag">免费停车</span>
+                    </div>
                 </div>
             </div>
-    
+            <!-- 苏浙汇 -->
             <div class="plan-card">
-                <div class="plan-header" style="background: linear-gradient(135deg, #9B7B8B, #9B7B8B);">
-                    <h2>苏浙汇（浦江华侨城店）</h2>
-                    <p>苏浙菜/本帮菜</p>
+                <div class="plan-header" style="background: linear-gradient(135deg, #9B7B8B, #764ba2);">
+                    <h2>苏浙汇（华侨城店）</h2>
+                    <p>苏浙菜/高端</p>
                 </div>
-                <div class="photo-gallery"><div class="photo-item"><img src="https://placehold.co/400x300/9B7B8B/FFFFFF?text=SuZheHui+Banquet" alt="苏浙汇（浦江华侨城店）"></div><div class="photo-item"><img src="https://placehold.co/400x300/A88898/FFFFFF?text=Private+Room" alt="苏浙汇（浦江华侨城店）"></div><div class="photo-item"><img src="https://placehold.co/400x300/8E6B7B/FFFFFF?text=Interior" alt="苏浙汇（浦江华侨城店）"></div></div>
+                <div class="photo-gallery">
+                    <div class="photo-item"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj4KICAgICAgICA8cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iIzlCN0I4QiIvPgogICAgICAgIDx0ZXh0IHg9IjIwMCIgeT0iMTQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjRkZGRkZGIiBmb250LXNpemU9IjI0IiBmb250LWZhbWlseT0iQXJpYWwiPgogICAgICAgICAgICDoi4/mtZnmsYfCt+WutOS8muWOhQogICAgICAgIDwvdGV4dD4KICAgICAgICA8dGV4dCB4PSIyMDAiIHk9IjE4MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI0ZGRkZGRiIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9IkFyaWFsIj4KICAgICAgICAgICAg5Zy65Zyw54Wn54mHCiAgICAgICAgPC90ZXh0PgogICAgPC9zdmc+" alt="苏浙汇"></div>
+                    <div class="photo-item"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj4KICAgICAgICA8cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iI0E4ODg5OCIvPgogICAgICAgIDx0ZXh0IHg9IjIwMCIgeT0iMTQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjRkZGRkZGIiBmb250LXNpemU9IjI0IiBmb250LWZhbWlseT0iQXJpYWwiPgogICAgICAgICAgICDoi4/mtZnmsYfCt+WMhemXtAogICAgICAgIDwvdGV4dD4KICAgICAgICA8dGV4dCB4PSIyMDAiIHk9IjE4MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI0ZGRkZGRiIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9IkFyaWFsIj4KICAgICAgICAgICAg5Zy65Zyw54Wn54mHCiAgICAgICAgPC90ZXh0PgogICAgPC9zdmc+" alt="苏浙汇"></div>
+                    <div class="photo-item"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj4KICAgICAgICA8cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iIzhFNkI3QiIvPgogICAgICAgIDx0ZXh0IHg9IjIwMCIgeT0iMTQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjRkZGRkZGIiBmb250LXNpemU9IjI0IiBmb250LWZhbWlseT0iQXJpYWwiPgogICAgICAgICAgICDoi4/mtZnmsYfCt+eOr+WigwogICAgICAgIDwvdGV4dD4KICAgICAgICA8dGV4dCB4PSIyMDAiIHk9IjE4MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI0ZGRkZGRiIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9IkFyaWFsIj4KICAgICAgICAgICAg5Zy65Zyw54Wn54mHCiAgICAgICAgPC90ZXh0PgogICAgPC9zdmc+" alt="苏浙汇"></div>
+                </div>
                 <div class="plan-body">
-                    <div class="info-row"><span class="label">⭐ 评分</span><span class="value rating">4.7-4.8 ★</span></div>
-                    <div class="info-row"><span class="label">💵 人均</span><span class="value">200-230 元</span></div>
-                    <div class="info-row"><span class="label">💰 总计</span><span class="value price">8000-9200 元</span></div>
-                    <div class="features"><span class="feature-tag">免费停车</span><span class="feature-tag">独立包间</span><span class="feature-tag">可定制菜单</span></div>
+                    <div class="info-row"><span class="label">📍 地址</span><span class="value">浦星公路 1558 号</span></div>
+                    <div class="info-row"><span class="label">📏 距离</span><span class="value">3.1km</span></div>
+                    <div class="info-row"><span class="label">👥 容纳</span><span class="value">70 人</span></div>
+                    <div class="info-row"><span class="label">⭐ 评分</span><span class="value rating">4.7 ★</span></div>
+                    <div class="info-row"><span class="label">💵 人均</span><span class="value">230 元</span></div>
+                    <div class="info-row"><span class="label">💰 总计</span><span class="value price">9,200 元</span></div>
+                    <div class="features">
+                        <span class="feature-tag">高端装修</span>
+                        <span class="feature-tag">宴会厅</span>
+                        <span class="feature-tag">免费停车</span>
+                    </div>
                 </div>
             </div>
-    
         </div>
         <div class="comparison-table">
-            <h3>📊 方案对比</h3>
+            <h3>📊 方案对比总览</h3>
             <table>
-                <thead><tr><th>对比项</th><th>曼芯馆</th><th>圆苑酒家</th><th>苏浙汇</th></tr></thead>
+                <thead>
+                    <tr><th>对比项</th><th>曼芯馆</th><th>圆苑酒家</th><th>苏浙汇</th></tr>
+                </thead>
                 <tbody>
                     <tr><td>距离</td><td>2.3km</td><td class="best">2.1km ✓</td><td>3.1km</td></tr>
                     <tr><td>人均</td><td>220 元</td><td class="best">200 元 ✓</td><td>230 元</td></tr>
-                    <tr><td>评分</td><td>4.7★</td><td class="best">4.8★ ✓</td><td>4.7★</td></tr>
+                    <tr><td>总预算</td><td>8,800 元</td><td class="best">8,000 元 ✓</td><td>9,200 元</td></tr>
+                    <tr><td>评分</td><td>4.7 ★</td><td class="best">4.8 ★ ✓</td><td>4.7 ★</td></tr>
+                    <tr><td>容纳</td><td>50 人</td><td>60 人</td><td class="best">70 人 ✓</td></tr>
                 </tbody>
             </table>
         </div>
         <div class="recommendation">
-            <h3>💡 推荐</h3>
+            <h3>💡 推荐建议</h3>
             <div class="rec-card">
-                <h4>🏆 曼芯馆艺术餐厅</h4>
-                <p>环境独特有艺术感，适合团建拍照，预算 8800 元在范围内</p>
+                <h4>🏆 首选：曼芯馆艺术餐厅</h4>
+                <ul>
+                    <li>环境独特有艺术感，适合团建拍照</li>
+                    <li>评分高（4.7 分），网上口碑好</li>
+                    <li>距离适中（2.3km），下班后方便</li>
+                    <li>预算 8800 元在 8000-10000 范围内</li>
+                </ul>
             </div>
         </div>
         <div class="footer">
             <p>2026 年 4 月 9 日 | 大众点评口碑推荐</p>
+            <p>图片为场地示意图，请以实际场地为准</p>
         </div>
     </div>
 </body>
