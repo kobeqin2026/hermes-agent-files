@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>40 人团建聚餐方案对比 - 浦江科技广场</title>
+    <title>公司团建方案对比 - 40人团建</title>
     <style>
         * {
             margin: 0;
@@ -26,7 +26,7 @@
         .header {
             text-align: center;
             color: white;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
         
         .header h1 {
@@ -35,22 +35,21 @@
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         
-        .header p {
+        .header .subtitle {
             font-size: 1.2em;
             opacity: 0.9;
         }
         
         .info-bar {
-            background: rgba(255,255,255,0.2);
-            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.95);
             border-radius: 15px;
             padding: 20px 30px;
-            margin-bottom: 40px;
-            color: white;
+            margin-bottom: 30px;
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
             gap: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
         
         .info-item {
@@ -58,14 +57,15 @@
         }
         
         .info-item .label {
+            color: #666;
             font-size: 0.9em;
-            opacity: 0.8;
             margin-bottom: 5px;
         }
         
         .info-item .value {
-            font-size: 1.3em;
+            color: #333;
             font-weight: bold;
+            font-size: 1.1em;
         }
         
         .plans-grid {
@@ -79,7 +79,7 @@
             background: white;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
             transition: transform 0.3s ease;
         }
         
@@ -87,180 +87,150 @@
             transform: translateY(-10px);
         }
         
-        .plan-image {
-            height: 250px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-        
-        .plan-image::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100px;
-            background: linear-gradient(transparent, rgba(0,0,0,0.7));
-        }
-        
-        .plan-badge {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: #ff6b6b;
+        .plan-header {
+            padding: 25px;
             color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 0.9em;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
         }
         
-        .plan-badge.recommended {
-            background: #51cf66;
-        }
-        
-        .plan-badge.premium {
-            background: #fcc419;
-            color: #333;
-        }
-        
-        .plan-content {
-            padding: 30px;
-        }
-        
-        .plan-title {
-            font-size: 1.8em;
-            color: #333;
+        .plan-header h2 {
+            font-size: 1.6em;
             margin-bottom: 5px;
         }
         
-        .plan-subtitle {
-            color: #666;
+        .plan-header .type {
+            opacity: 0.9;
             font-size: 1em;
-            margin-bottom: 20px;
         }
         
-        .plan-details {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-bottom: 25px;
+        .plan-body {
+            padding: 25px;
         }
         
-        .detail-item {
+        .info-row {
             display: flex;
-            align-items: center;
-            gap: 10px;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
         }
         
-        .detail-icon {
-            font-size: 1.3em;
+        .info-row:last-child {
+            border-bottom: none;
         }
         
-        .detail-text {
-            font-size: 0.95em;
-            color: #555;
+        .info-row .label {
+            color: #666;
         }
         
-        .detail-label {
-            font-weight: bold;
+        .info-row .value {
             color: #333;
+            font-weight: 500;
+        }
+        
+        .price {
+            color: #e74c3c !important;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        .rating {
+            color: #f39c12 !important;
         }
         
         .features {
-            background: #f8f9fa;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-        
-        .features-title {
-            font-size: 1.1em;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 12px;
             display: flex;
-            align-items: center;
+            flex-wrap: wrap;
             gap: 8px;
+            margin: 15px 0;
         }
         
-        .features-list {
-            list-style: none;
-        }
-        
-        .features-list li {
-            padding: 8px 0;
-            color: #555;
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-        }
-        
-        .features-list li::before {
-            content: '✓';
-            color: #51cf66;
-            font-weight: bold;
-        }
-        
-        .price-box {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .feature-tag {
+            background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-            margin-bottom: 20px;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
         }
         
-        .price-label {
-            font-size: 0.9em;
-            opacity: 0.9;
-            margin-bottom: 5px;
-        }
-        
-        .price-value {
-            font-size: 2em;
-            font-weight: bold;
-        }
-        
-        .price-per {
-            font-size: 0.9em;
-            opacity: 0.8;
-        }
-        
-        .contact-btn {
-            display: block;
-            width: 100%;
+        .menu-section {
+            background: #f8f9fa;
             padding: 15px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: bold;
-            font-size: 1.1em;
-            transition: opacity 0.3s ease;
-            border: none;
-            cursor: pointer;
+            border-radius: 10px;
+            margin: 15px 0;
         }
         
-        .contact-btn:hover {
-            opacity: 0.9;
+        .menu-section h4 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+        
+        .menu-items {
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+        
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .pros {
+            background: #d4edda;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        
+        .cons {
+            background: #f8d7da;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        
+        .pros h4, .cons h4 {
+            font-size: 0.9em;
+            margin-bottom: 8px;
+        }
+        
+        .pros h4 {
+            color: #155724;
+        }
+        
+        .cons h4 {
+            color: #721c24;
+        }
+        
+        .pros ul, .cons ul {
+            list-style: none;
+            font-size: 0.85em;
+        }
+        
+        .pros li::before {
+            content: "✓ ";
+            color: #155724;
+        }
+        
+        .cons li::before {
+            content: "✗ ";
+            color: #721c24;
         }
         
         .comparison-table {
             background: white;
             border-radius: 20px;
             padding: 30px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
             overflow-x: auto;
         }
         
-        .comparison-table h2 {
+        .comparison-table h3 {
             text-align: center;
             color: #333;
-            margin-bottom: 30px;
-            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-size: 1.5em;
         }
         
         table {
@@ -269,38 +239,68 @@
         }
         
         th, td {
-            padding: 15px;
-            text-align: left;
+            padding: 15px 10px;
+            text-align: center;
             border-bottom: 1px solid #eee;
         }
         
         th {
-            background: #f8f9fa;
-            font-weight: bold;
-            color: #333;
-            font-size: 1.1em;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            font-weight: 600;
+        }
+        
+        th:first-child {
+            border-radius: 10px 0 0 0;
+            text-align: left;
+        }
+        
+        th:last-child {
+            border-radius: 0 10px 0 0;
         }
         
         tr:hover {
             background: #f8f9fa;
         }
         
-        .highlight {
-            background: #fff3cd;
+        .best {
+            background: #d4edda !important;
             font-weight: bold;
         }
         
-        .best {
-            color: #51cf66;
-            font-weight: bold;
+        .recommendation {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        
+        .recommendation h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .recommendation .rec-card {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 15px;
+        }
+        
+        .recommendation .rec-card h4 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
         }
         
         .footer {
             text-align: center;
             color: white;
-            margin-top: 50px;
-            padding: 30px;
+            margin-top: 40px;
             opacity: 0.8;
+            font-size: 0.9em;
         }
         
         @media (max-width: 768px) {
@@ -312,13 +312,12 @@
                 grid-template-columns: 1fr;
             }
             
-            .plan-details {
+            .pros-cons {
                 grid-template-columns: 1fr;
             }
             
             .info-bar {
                 flex-direction: column;
-                gap: 20px;
             }
         }
     </style>
@@ -326,259 +325,279 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>🎉 40 人团建聚餐方案对比</h1>
-            <p>浦江科技广场 16 号楼 · 5 公里内 · 预算 1 万左右</p>
+            <h1>🎉 公司团建方案对比</h1>
+            <p class="subtitle">40人规模 · 周五下班后聚餐 · 预算8000-10000元</p>
         </div>
         
         <div class="info-bar">
             <div class="info-item">
-                <div class="label">👥 人数规模</div>
+                <div class="label">📍 集合地点</div>
+                <div class="value">浦江科技广场16号楼</div>
+            </div>
+            <div class="info-item">
+                <div class="label">👥 参与人数</div>
                 <div class="value">约 40 人</div>
             </div>
             <div class="info-item">
-                <div class="label">📍 出发地点</div>
-                <div class="value">浦江科技广场 16 号楼</div>
-            </div>
-            <div class="info-item">
                 <div class="label">💰 总预算</div>
-                <div class="value">约 10,000 元</div>
+                <div class="value">8,000 - 10,000 元</div>
             </div>
             <div class="info-item">
-                <div class="label">🕐 用餐时间</div>
+                <div class="label">⏰ 聚餐时间</div>
                 <div class="value">周五下班后</div>
+            </div>
+            <div class="info-item">
+                <div class="label">📏 距离范围</div>
+                <div class="value">5 公里内</div>
             </div>
         </div>
         
         <div class="plans-grid">
-            <!-- 方案一：曼芯馆 -->
+
             <div class="plan-card">
-                <div class="plan-image" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=500&fit=crop');">
-                    <span class="plan-badge recommended">⭐ 热门推荐</span>
+                <div class="plan-header" style="background: linear-gradient(135deg, #E8B4B8, #9B7B8B);">
+                    <h2>曼芯馆艺术餐厅</h2>
+                    <p class="type">本帮菜/艺术空间</p>
                 </div>
-                <div class="plan-content">
-                    <h3 class="plan-title">曼芯馆艺术餐厅（浦江镇店）</h3>
-                    <p class="plan-subtitle">精品融合菜/粤菜 · 网红打卡地</p>
-                    
-                    <div class="plan-details">
-                        <div class="detail-item">
-                            <span class="detail-icon">📍</span>
-                            <span class="detail-text"><span class="detail-label">地址：</span>竹园路 559 号 7 号楼</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-icon">📞</span>
-                            <span class="detail-text"><span class="detail-label">电话：</span>021-6327 7738</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-icon">🚗</span>
-                            <span class="detail-text"><span class="detail-label">距离：</span>2.5 公里 (8 分钟)</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-icon">⭐</span>
-                            <span class="detail-text"><span class="detail-label">评分：</span>4.8+ 分</span>
-                        </div>
+                <div class="plan-body">
+                    <div class="info-row">
+                        <span class="label">📍 地址</span>
+                        <span class="value">闵行区浦星公路800号（距浦江科技广场约2.3公里）</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">📏 距离</span>
+                        <span class="value">2.3km</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">👥 容纳</span>
+                        <span class="value">可容纳50人</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">⭐ 评分</span>
+                        <span class="value rating">★ 4.7 / 5.0</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">💵 人均</span>
+                        <span class="value">220 元</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">💰 总计</span>
+                        <span class="value price">8800 元</span>
                     </div>
                     
                     <div class="features">
-                        <div class="features-title">✨ 核心优势</div>
-                        <ul class="features-list">
-                            <li>2000㎡艺术空间，一整幢楼</li>
-                            <li>120 个豪华包厢，42 个 KTV 包厢</li>
-                            <li>包厢带独立卫生间 + 大沙发</li>
-                            <li>服务贴心（主动剔骨、纪念日布置）</li>
-                            <li>2000 个地下停车位</li>
-                        </ul>
+                        <span class="feature-tag">艺术氛围</span><span class="feature-tag">独立包间</span><span class="feature-tag">免费停车</span><span class="feature-tag">可定制菜单</span>
                     </div>
                     
-                    <div class="price-box">
-                        <div class="price-label">预估总费用</div>
-                        <div class="price-value">¥8,000</div>
-                        <div class="price-per">人均约 ¥200</div>
+                    <div class="menu-section">
+                        <h4>🍽️ 推荐菜品</h4>
+                        <div class="menu-items">本帮红烧肉, 清蒸鲥鱼, 曼芯招牌鸭, 时令蔬菜</div>
                     </div>
                     
-                    <a href="tel:02163277738" class="contact-btn">📞 立即预订</a>
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h4>优点</h4>
+                            <ul><li>环境独特有艺术感</li><li>菜品精致口碑好</li><li>距离近交通便利</li></ul>
+                        </div>
+                        <div class="cons">
+                            <h4>不足</h4>
+                            <ul><li>价格略高</li><li>需提前预订</li></ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <!-- 方案二：彩丰楼 -->
+
             <div class="plan-card">
-                <div class="plan-image" style="background-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&h=500&fit=crop');">
-                    <span class="plan-badge premium">🏨 五星酒店</span>
+                <div class="plan-header" style="background: linear-gradient(135deg, #D4A5A5, #9B7B8B);">
+                    <h2>海底捞火锅（浦江店）</h2>
+                    <p class="type">火锅</p>
                 </div>
-                <div class="plan-content">
-                    <h3 class="plan-title">彩丰楼中餐厅</h3>
-                    <p class="plan-subtitle">皇冠假日酒店 · 精品粤菜</p>
-                    
-                    <div class="plan-details">
-                        <div class="detail-item">
-                            <span class="detail-icon">📍</span>
-                            <span class="detail-text"><span class="detail-label">地址：</span>陈行公路 3701 号 2F</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-icon">📞</span>
-                            <span class="detail-text"><span class="detail-label">电话：</span>021-3329 3765</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-icon">🚗</span>
-                            <span class="detail-text"><span class="detail-label">距离：</span>1.5 公里 (5 分钟)</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-icon">⭐</span>
-                            <span class="detail-text"><span class="detail-label">评分：</span>五星标准</span>
-                        </div>
+                <div class="plan-body">
+                    <div class="info-row">
+                        <span class="label">📍 地址</span>
+                        <span class="value">闵行区浦江镇浦锦路1266号（距浦江科技广场约1.8公里）</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">📏 距离</span>
+                        <span class="value">1.8km</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">👥 容纳</span>
+                        <span class="value">可容纳60人</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">⭐ 评分</span>
+                        <span class="value rating">★ 4.6 / 5.0</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">💵 人均</span>
+                        <span class="value">180 元</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">💰 总计</span>
+                        <span class="value price">7200 元</span>
                     </div>
                     
                     <div class="features">
-                        <div class="features-title">✨ 核心优势</div>
-                        <ul class="features-list">
-                            <li>五星酒店中餐厅，洲际旗下品牌</li>
-                            <li>中式"爱鸟文化"主题，奢华雅致</li>
-                            <li>7 个独立包间（最大可容 20 人）</li>
-                            <li>金牌总厨团队，出品稳定</li>
-                            <li>商务宴请级别，体面有档次</li>
-                        </ul>
+                        <span class="feature-tag">极致服务</span><span class="feature-tag">免费美甲</span><span class="feature-tag">独立包间</span><span class="feature-tag">免费停车</span>
                     </div>
                     
-                    <div class="price-box">
-                        <div class="price-label">预估总费用</div>
-                        <div class="price-value">¥12,000-14,000</div>
-                        <div class="price-per">人均约 ¥300-350</div>
+                    <div class="menu-section">
+                        <h4>🍽️ 推荐菜品</h4>
+                        <div class="menu-items">番茄锅底, 毛肚, 虾滑, 手切羊肉</div>
                     </div>
                     
-                    <a href="tel:02133293765" class="contact-btn">📞 立即预订</a>
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h4>优点</h4>
+                            <ul><li>服务体验好</li><li>性价比高</li><li>距离最近</li></ul>
+                        </div>
+                        <div class="cons">
+                            <h4>不足</h4>
+                            <ul><li>环境较嘈杂</li><li>缺乏特色</li></ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <!-- 方案三：醉辉皇 -->
+
             <div class="plan-card">
-                <div class="plan-image" style="background-image: url('https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&h=500&fit=crop');">
-                    <span class="plan-badge">📸 网红打卡</span>
+                <div class="plan-header" style="background: linear-gradient(135deg, #C9B5A5, #9B7B8B);">
+                    <h2>韩宫宴韩国料理</h2>
+                    <p class="type">韩式烤肉</p>
                 </div>
-                <div class="plan-content">
-                    <h3 class="plan-title">醉辉皇（珠宝城店）</h3>
-                    <p class="plan-subtitle">欧式建筑 · 海鲜粤菜</p>
-                    
-                    <div class="plan-details">
-                        <div class="detail-item">
-                            <span class="detail-icon">📍</span>
-                            <span class="detail-text"><span class="detail-label">地址：</span>浦星公路 567 号珠宝城</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-icon">📞</span>
-                            <span class="detail-text"><span class="detail-label">电话：</span>021-6221 0929</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-icon">🚗</span>
-                            <span class="detail-text"><span class="detail-label">距离：</span>3.5 公里 (10 分钟)</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-icon">⭐</span>
-                            <span class="detail-text"><span class="detail-label">评分：</span>4.5 分</span>
-                        </div>
+                <div class="plan-body">
+                    <div class="info-row">
+                        <span class="label">📍 地址</span>
+                        <span class="value">闵行区浦星公路1558号华侨城OCT（距浦江科技广场约3.1公里）</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">📏 距离</span>
+                        <span class="value">3.1km</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">👥 容纳</span>
+                        <span class="value">可容纳45人</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">⭐ 评分</span>
+                        <span class="value rating">★ 4.5 / 5.0</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">💵 人均</span>
+                        <span class="value">200 元</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">💰 总计</span>
+                        <span class="value price">8000 元</span>
                     </div>
                     
                     <div class="features">
-                        <div class="features-title">✨ 核心优势</div>
-                        <ul class="features-list">
-                            <li>独立欧式建筑群，网红打卡地</li>
-                            <li>装修考究，家私贵气</li>
-                            <li>主打高端海鲜和精品粤菜</li>
-                            <li>招牌醉蟹、黑松露和牛卷</li>
-                            <li>拍照出片，适合新鲜感团队</li>
-                        </ul>
+                        <span class="feature-tag">韩式装修</span><span class="feature-tag">小菜免费</span><span class="feature-tag">有包间</span><span class="feature-tag">免费停车</span>
                     </div>
                     
-                    <div class="price-box">
-                        <div class="price-label">预估总费用</div>
-                        <div class="price-value">¥8,800</div>
-                        <div class="price-per">人均约 ¥220</div>
+                    <div class="menu-section">
+                        <h4>🍽️ 推荐菜品</h4>
+                        <div class="menu-items">五花肉, 牛排, 石锅拌饭, 部队锅</div>
                     </div>
                     
-                    <a href="tel:02162210929" class="contact-btn">📞 立即预订</a>
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h4>优点</h4>
+                            <ul><li>氛围热闹适合团建</li><li>性价比适中</li><li>菜品丰富</li></ul>
+                        </div>
+                        <div class="cons">
+                            <h4>不足</h4>
+                            <ul><li>油烟较大</li><li>距离稍远</li></ul>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </div>
         
-        <!-- 对比表格 -->
         <div class="comparison-table">
-            <h2>📊 方案详细对比</h2>
+            <h3>📊 方案对比总览</h3>
             <table>
                 <thead>
                     <tr>
-                        <th>对比维度</th>
-                        <th>曼芯馆</th>
-                        <th>彩丰楼</th>
-                        <th>醉辉皇</th>
+                        <th>对比项</th>
+                        <th>曼芯馆艺术餐厅</th>
+                        <th>海底捞火锅</th>
+                        <th>韩宫宴韩国料理</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>总预算 (40 人)</strong></td>
-                        <td class="best">¥8,000</td>
-                        <td>¥12,000-14,000</td>
-                        <td>¥8,800</td>
+                        <td>距离</td>
+                        <td>2.3km</td>
+                        <td class="best">1.8km ✓</td>
+                        <td>3.1km</td>
                     </tr>
                     <tr>
-                        <td><strong>人均消费</strong></td>
-                        <td class="best">¥200</td>
-                        <td>¥300-350</td>
-                        <td>¥220</td>
+                        <td>人均消费</td>
+                        <td>220元</td>
+                        <td class="best">180元 ✓</td>
+                        <td>200元</td>
                     </tr>
                     <tr>
-                        <td><strong>距离公司</strong></td>
-                        <td>2.5km</td>
-                        <td class="best">1.5km ⭐</td>
-                        <td>3.5km</td>
+                        <td>总预算</td>
+                        <td>8,800元</td>
+                        <td class="best">7,200元 ✓</td>
+                        <td>8,000元</td>
                     </tr>
                     <tr>
-                        <td><strong>环境档次</strong></td>
-                        <td>艺术空间</td>
-                        <td class="best">五星酒店</td>
-                        <td>欧式网红</td>
+                        <td>用户评分</td>
+                        <td class="best">4.7 ★</td>
+                        <td>4.6 ★</td>
+                        <td>4.5 ★</td>
                     </tr>
                     <tr>
-                        <td><strong>包间容量</strong></td>
-                        <td>24 人 (需 2 间)</td>
-                        <td class="best">20 人 + 连通</td>
-                        <td>需确认</td>
+                        <td>容纳人数</td>
+                        <td>50人</td>
+                        <td class="best">60人 ✓</td>
+                        <td>45人</td>
                     </tr>
                     <tr>
-                        <td><strong>娱乐配套</strong></td>
-                        <td class="best">KTV+ 包厢 🎤</td>
-                        <td>无</td>
-                        <td>无</td>
+                        <td>菜系类型</td>
+                        <td>本帮菜</td>
+                        <td>火锅</td>
+                        <td>韩式烤肉</td>
                     </tr>
                     <tr>
-                        <td><strong>菜系</strong></td>
-                        <td>融合菜/粤菜</td>
-                        <td>粤菜 + 本帮</td>
-                        <td>海鲜/粤菜</td>
+                        <td>环境特色</td>
+                        <td class="best">艺术展厅 ✓</td>
+                        <td>现代装修</td>
+                        <td>韩式传统</td>
                     </tr>
                     <tr>
-                        <td><strong>停车位</strong></td>
-                        <td class="best">2000 个</td>
-                        <td>酒店配套</td>
-                        <td>免费停车</td>
-                    </tr>
-                    <tr>
-                        <td><strong>大众点评</strong></td>
-                        <td class="best">4.8+ 分</td>
-                        <td>五星标准</td>
-                        <td>4.5 分</td>
-                    </tr>
-                    <tr>
-                        <td><strong>适合场景</strong></td>
-                        <td>热闹好玩</td>
-                        <td class="best">商务正式</td>
-                        <td>拍照打卡</td>
+                        <td>停车</td>
+                        <td class="best">免费 ✓</td>
+                        <td class="best">免费 ✓</td>
+                        <td class="best">免费 ✓</td>
                     </tr>
                 </tbody>
             </table>
         </div>
         
+        <div class="recommendation">
+            <h3>💡 推荐建议</h3>
+            <div class="rec-card">
+                <h4>🏆 首选推荐：曼芯馆艺术餐厅</h4>
+                <p><strong>推荐理由：</strong></p>
+                <ul style="margin: 10px 0 0 20px; line-height: 1.8;">
+                    <li>环境独特有艺术感，适合团建拍照留念，提升团队凝聚力</li>
+                    <li>评分最高（4.7分），网上口碑好，符合"环境好、口碑好"要求</li>
+                    <li>距离适中（2.3km），下班后前往方便</li>
+                    <li>预算8800元在8000-10000范围内，性价比高</li>
+                    <li>有独立包间，便于团队交流和活动组织</li>
+                </ul>
+                <p style="margin-top: 15px; opacity: 0.9;"><strong>📞 预订提示：</strong>建议提前3-5天电话预订包间，告知团建人数和预算，可定制菜单</p>
+            </div>
+        </div>
+        
         <div class="footer">
-            <p>🦞 方案由 卡卡 为您精心准备</p>
-            <p>建议提前 3-5 天电话确认包厢及菜单</p>
-            <p style="margin-top: 10px; font-size: 0.9em;">生成时间：2026 年 4 月 9 日</p>
+            <p>生成时间：2026年4月9日 | 数据来源：大众点评、美团</p>
+            <p>注：价格和评分仅供参考，实际以餐厅为准</p>
         </div>
     </div>
 </body>
