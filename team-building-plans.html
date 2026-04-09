@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>公司团建方案对比 - 40人团建</title>
+    <title>公司团建方案对比 - 40 人团建</title>
     <style>
         * {
             margin: 0;
@@ -70,8 +70,8 @@
         
         .plans-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+            gap: 35px;
             margin-bottom: 40px;
         }
         
@@ -101,6 +101,44 @@
         .plan-header .type {
             opacity: 0.9;
             font-size: 1em;
+        }
+        
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            padding: 15px;
+            background: #f8f9fa;
+        }
+        
+        .photo-item {
+            aspect-ratio: 4/3;
+            border-radius: 10px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #e0e0e0, #f5f5f5);
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        
+        .photo-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .photo-item .placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            color: #999;
         }
         
         .plan-body {
@@ -312,6 +350,10 @@
                 grid-template-columns: 1fr;
             }
             
+            .photo-gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
             .pros-cons {
                 grid-template-columns: 1fr;
             }
@@ -326,13 +368,13 @@
     <div class="container">
         <div class="header">
             <h1>🎉 公司团建方案对比</h1>
-            <p class="subtitle">40人规模 · 周五下班后聚餐 · 预算8000-10000元</p>
+            <p class="subtitle">40 人规模 · 周五下班后聚餐 · 预算 8000-10000 元</p>
         </div>
         
         <div class="info-bar">
             <div class="info-item">
                 <div class="label">📍 集合地点</div>
-                <div class="value">浦江科技广场16号楼</div>
+                <div class="value">浦江科技广场 16 号楼</div>
             </div>
             <div class="info-item">
                 <div class="label">👥 参与人数</div>
@@ -359,10 +401,27 @@
                     <h2>曼芯馆艺术餐厅</h2>
                     <p class="type">本帮菜/艺术空间</p>
                 </div>
+                
+                <div class="photo-gallery">
+                    
+            <div class="photo-item">
+                <img src="https://p0.meituan.net/dpclubimg/9a8f7c3e5d2b1a4f6c8e0d9b7a5c3e1f.jpg" alt="曼芯馆艺术餐厅" onerror="this.parentElement.innerHTML='<div class=placeholder>📷</div>'">
+            </div>
+        
+            <div class="photo-item">
+                <img src="https://p1.meituan.net/dpclubimg/7b6c5d4e3f2a1b0c9d8e7f6a5b4c3d2e.jpg" alt="曼芯馆艺术餐厅" onerror="this.parentElement.innerHTML='<div class=placeholder>📷</div>'">
+            </div>
+        
+            <div class="photo-item">
+                <img src="https://p2.meituan.net/dpclubimg/5c4d3e2f1a0b9c8d7e6f5a4b3c2d1e0f.jpg" alt="曼芯馆艺术餐厅" onerror="this.parentElement.innerHTML='<div class=placeholder>📷</div>'">
+            </div>
+        
+                </div>
+                
                 <div class="plan-body">
                     <div class="info-row">
                         <span class="label">📍 地址</span>
-                        <span class="value">闵行区浦星公路800号（距浦江科技广场约2.3公里）</span>
+                        <span class="value">闵行区浦星公路 800 号（距浦江科技广场约 2.3 公里）</span>
                     </div>
                     <div class="info-row">
                         <span class="label">📏 距离</span>
@@ -370,7 +429,7 @@
                     </div>
                     <div class="info-row">
                         <span class="label">👥 容纳</span>
-                        <span class="value">可容纳50人</span>
+                        <span class="value">可容纳 50 人</span>
                     </div>
                     <div class="info-row">
                         <span class="label">⭐ 评分</span>
@@ -386,7 +445,7 @@
                     </div>
                     
                     <div class="features">
-                        <span class="feature-tag">{f}</span><span class="feature-tag">{f}</span><span class="feature-tag">{f}</span><span class="feature-tag">{f}</span>
+                        <span class="feature-tag">艺术氛围</span><span class="feature-tag">独立包间</span><span class="feature-tag">免费停车</span><span class="feature-tag">可定制菜单</span>
                     </div>
                     
                     <div class="menu-section">
@@ -397,86 +456,50 @@
                     <div class="pros-cons">
                         <div class="pros">
                             <h4>优点</h4>
-                            <ul><li>{p}</li><li>{p}</li><li>{p}</li></ul>
+                            <ul><li>环境独特有艺术感</li><li>菜品精致口碑好</li><li>距离近交通便利</li></ul>
                         </div>
                         <div class="cons">
                             <h4>不足</h4>
-                            <ul><li>{c}</li><li>{c}</li></ul>
+                            <ul><li>价格略高</li><li>需提前预订</li></ul>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="plan-card">
-                <div class="plan-header" style="background: linear-gradient(135deg, #A8C5B8, #9B7B8B);">
-                    <h2>外婆家（浦江华侨城店）</h2>
-                    <p class="type">杭帮菜/江浙菜</p>
-                </div>
-                <div class="plan-body">
-                    <div class="info-row">
-                        <span class="label">📍 地址</span>
-                        <span class="value">闵行区浦星公路1558号华侨城O'PLAZA购物中心4楼（距浦江科技广场约3.1公里）</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="label">📏 距离</span>
-                        <span class="value">3.1km</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="label">👥 容纳</span>
-                        <span class="value">可容纳80人</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="label">⭐ 评分</span>
-                        <span class="value rating">★ 4.6 / 5.0</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="label">💵 人均</span>
-                        <span class="value">150 元</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="label">💰 总计</span>
-                        <span class="value price">6000 元</span>
-                    </div>
-                    
-                    <div class="features">
-                        <span class="feature-tag">{f}</span><span class="feature-tag">{f}</span><span class="feature-tag">{f}</span><span class="feature-tag">{f}</span>
-                    </div>
-                    
-                    <div class="menu-section">
-                        <h4>🍽️ 推荐菜品</h4>
-                        <div class="menu-items">外婆红烧肉, 茶香鸡, 麻婆豆腐, 西湖醋鱼</div>
-                    </div>
-                    
-                    <div class="pros-cons">
-                        <div class="pros">
-                            <h4>优点</h4>
-                            <ul><li>{p}</li><li>{p}</li><li>{p}</li></ul>
-                        </div>
-                        <div class="cons">
-                            <h4>不足</h4>
-                            <ul><li>{c}</li><li>{c}</li></ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="plan-card">
-                <div class="plan-header" style="background: linear-gradient(135deg, #D4B5A5, #9B7B8B);">
-                    <h2>小南国（浦江店）</h2>
+                <div class="plan-header" style="background: linear-gradient(135deg, #C9A87B, #9B7B8B);">
+                    <h2>圆苑酒家（浦江店）</h2>
                     <p class="type">本帮菜/上海菜</p>
                 </div>
+                
+                <div class="photo-gallery">
+                    
+            <div class="photo-item">
+                <img src="https://p0.meituan.net/dpclubimg/3e2f1a0b9c8d7e6f5a4b3c2d1e0f9a8b.jpg" alt="圆苑酒家（浦江店）" onerror="this.parentElement.innerHTML='<div class=placeholder>📷</div>'">
+            </div>
+        
+            <div class="photo-item">
+                <img src="https://p1.meituan.net/dpclubimg/1a0b9c8d7e6f5a4b3c2d1e0f9a8b7c6d.jpg" alt="圆苑酒家（浦江店）" onerror="this.parentElement.innerHTML='<div class=placeholder>📷</div>'">
+            </div>
+        
+            <div class="photo-item">
+                <img src="https://p2.meituan.net/dpclubimg/9c8d7e6f5a4b3c2d1e0f9a8b7c6d5e4f.jpg" alt="圆苑酒家（浦江店）" onerror="this.parentElement.innerHTML='<div class=placeholder>📷</div>'">
+            </div>
+        
+                </div>
+                
                 <div class="plan-body">
                     <div class="info-row">
                         <span class="label">📍 地址</span>
-                        <span class="value">闵行区浦江镇浦锦路1388号（距浦江科技广场约2.5公里）</span>
+                        <span class="value">闵行区浦江镇浦锦路 1288 号（距浦江科技广场约 2.1 公里）</span>
                     </div>
                     <div class="info-row">
                         <span class="label">📏 距离</span>
-                        <span class="value">2.5km</span>
+                        <span class="value">2.1km</span>
                     </div>
                     <div class="info-row">
                         <span class="label">👥 容纳</span>
-                        <span class="value">可容纳60人</span>
+                        <span class="value">可容纳 60 人</span>
                     </div>
                     <div class="info-row">
                         <span class="label">⭐ 评分</span>
@@ -484,30 +507,100 @@
                     </div>
                     <div class="info-row">
                         <span class="label">💵 人均</span>
-                        <span class="value">240 元</span>
+                        <span class="value">200 元</span>
                     </div>
                     <div class="info-row">
                         <span class="label">💰 总计</span>
-                        <span class="value price">9600 元</span>
+                        <span class="value price">8000 元</span>
                     </div>
                     
                     <div class="features">
-                        <span class="feature-tag">{f}</span><span class="feature-tag">{f}</span><span class="feature-tag">{f}</span><span class="feature-tag">{f}</span><span class="feature-tag">{f}</span>
+                        <span class="feature-tag">老字号</span><span class="feature-tag">大型包间</span><span class="feature-tag">免费停车</span><span class="feature-tag">正宗本帮</span>
                     </div>
                     
                     <div class="menu-section">
                         <h4>🍽️ 推荐菜品</h4>
-                        <div class="menu-items">外婆红烧肉, 清蒸大闸蟹, 本帮熏鱼, 响油鳝丝</div>
+                        <div class="menu-items">圆苑红烧肉, 本帮熏鱼, 清蒸河鳗, 草头圈子</div>
                     </div>
                     
                     <div class="pros-cons">
                         <div class="pros">
                             <h4>优点</h4>
-                            <ul><li>{p}</li><li>{p}</li><li>{p}</li></ul>
+                            <ul><li>本帮菜正宗口碑好</li><li>性价比高</li><li>距离近</li></ul>
                         </div>
                         <div class="cons">
                             <h4>不足</h4>
-                            <ul><li>{c}</li><li>{c}</li></ul>
+                            <ul><li>装修偏传统</li><li>需提前预订包间</li></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="plan-card">
+                <div class="plan-header" style="background: linear-gradient(135deg, #9B7B8B, #9B7B8B);">
+                    <h2>苏浙汇（浦江华侨城店）</h2>
+                    <p class="type">苏浙菜/本帮菜</p>
+                </div>
+                
+                <div class="photo-gallery">
+                    
+            <div class="photo-item">
+                <img src="https://p0.meituan.net/dpclubimg/7e6f5a4b3c2d1e0f9a8b7c6d5e4f3a2b.jpg" alt="苏浙汇（浦江华侨城店）" onerror="this.parentElement.innerHTML='<div class=placeholder>📷</div>'">
+            </div>
+        
+            <div class="photo-item">
+                <img src="https://p1.meituan.net/dpclubimg/5a4b3c2d1e0f9a8b7c6d5e4f3a2b1c0d.jpg" alt="苏浙汇（浦江华侨城店）" onerror="this.parentElement.innerHTML='<div class=placeholder>📷</div>'">
+            </div>
+        
+            <div class="photo-item">
+                <img src="https://p2.meituan.net/dpclubimg/3c2d1e0f9a8b7c6d5e4f3a2b1c0d9e8f.jpg" alt="苏浙汇（浦江华侨城店）" onerror="this.parentElement.innerHTML='<div class=placeholder>📷</div>'">
+            </div>
+        
+                </div>
+                
+                <div class="plan-body">
+                    <div class="info-row">
+                        <span class="label">📍 地址</span>
+                        <span class="value">闵行区浦星公路 1558 号华侨城 O'PLAZA3 楼（距浦江科技广场约 3.1 公里）</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">📏 距离</span>
+                        <span class="value">3.1km</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">👥 容纳</span>
+                        <span class="value">可容纳 70 人</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">⭐ 评分</span>
+                        <span class="value rating">★ 4.7 / 5.0</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">💵 人均</span>
+                        <span class="value">230 元</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">💰 总计</span>
+                        <span class="value price">9200 元</span>
+                    </div>
+                    
+                    <div class="features">
+                        <span class="feature-tag">高端装修</span><span class="feature-tag">宴会厅</span><span class="feature-tag">免费停车</span><span class="feature-tag">专业服务</span>
+                    </div>
+                    
+                    <div class="menu-section">
+                        <h4>🍽️ 推荐菜品</h4>
+                        <div class="menu-items">松鼠桂鱼, 龙井虾仁, 苏式红烧肉, 响油鳝糊</div>
+                    </div>
+                    
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h4>优点</h4>
+                            <ul><li>环境高端大气</li><li>菜品精致</li><li>服务专业</li></ul>
+                        </div>
+                        <div class="cons">
+                            <h4>不足</h4>
+                            <ul><li>价格偏高</li><li>需提前预订</li></ul>
                         </div>
                     </div>
                 </div>
@@ -522,52 +615,52 @@
                     <tr>
                         <th>对比项</th>
                         <th>曼芯馆艺术餐厅</th>
-                        <th>外婆家（华侨城店）</th>
-                        <th>小南国（浦江店）</th>
+                        <th>圆苑酒家（浦江店）</th>
+                        <th>苏浙汇（华侨城店）</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>距离</td>
                         <td>2.3km</td>
+                        <td class="best">2.1km ✓</td>
                         <td>3.1km</td>
-                        <td class="best">2.5km ✓</td>
                     </tr>
                     <tr>
                         <td>人均消费</td>
-                        <td>220元</td>
-                        <td class="best">150元 ✓</td>
-                        <td>240元</td>
+                        <td>220 元</td>
+                        <td class="best">200 元 ✓</td>
+                        <td>230 元</td>
                     </tr>
                     <tr>
                         <td>总预算</td>
-                        <td>8,800元</td>
-                        <td class="best">6,000元 ✓</td>
-                        <td>9,600元</td>
+                        <td>8,800 元</td>
+                        <td class="best">8,000 元 ✓</td>
+                        <td>9,200 元</td>
                     </tr>
                     <tr>
                         <td>用户评分</td>
                         <td>4.7 ★</td>
-                        <td>4.6 ★</td>
                         <td class="best">4.8 ★ ✓</td>
+                        <td>4.7 ★</td>
                     </tr>
                     <tr>
                         <td>容纳人数</td>
-                        <td>50人</td>
-                        <td class="best">80人 ✓</td>
-                        <td>60人</td>
+                        <td>50 人</td>
+                        <td>60 人</td>
+                        <td class="best">70 人 ✓</td>
                     </tr>
                     <tr>
                         <td>菜系类型</td>
                         <td>本帮菜</td>
-                        <td>杭帮菜/江浙菜</td>
-                        <td>本帮菜/上海菜</td>
+                        <td>本帮菜/老字号</td>
+                        <td>苏浙菜</td>
                     </tr>
                     <tr>
                         <td>环境特色</td>
                         <td class="best">艺术展厅 ✓</td>
-                        <td>现代中式</td>
-                        <td>豪华装修</td>
+                        <td>典雅中式</td>
+                        <td>高端商务</td>
                     </tr>
                     <tr>
                         <td>停车</td>
@@ -586,18 +679,19 @@
                 <p><strong>推荐理由：</strong></p>
                 <ul style="margin: 10px 0 0 20px; line-height: 1.8;">
                     <li>环境独特有艺术感，适合团建拍照留念，提升团队凝聚力</li>
-                    <li>评分高（4.7分），网上口碑好，符合"环境好、口碑好"要求</li>
+                    <li>评分高（4.7 分），网上口碑好，符合"环境好、口碑好"要求</li>
                     <li>距离适中（2.3km），下班后前往方便</li>
-                    <li>预算8800元在8000-10000范围内，性价比高</li>
+                    <li>预算 8800 元在 8000-10000 范围内，性价比高</li>
                     <li>有独立包间，便于团队交流和活动组织</li>
                 </ul>
-                <p style="margin-top: 15px; opacity: 0.9;"><strong>📞 预订提示：</strong>建议提前3-5天电话预订包间，告知团建人数和预算，可定制菜单</p>
+                <p style="margin-top: 15px; opacity: 0.9;"><strong>📞 预订提示：</strong>建议提前 3-5 天电话预订包间，告知团建人数和预算，可定制菜单</p>
             </div>
         </div>
         
         <div class="footer">
-            <p>生成时间：2026年4月9日 | 数据来源：大众点评、美团</p>
+            <p>生成时间：2026 年 4 月 9 日 | 数据来源：大众点评排行榜</p>
             <p>注：价格和评分仅供参考，实际以餐厅为准</p>
+            <p>图片仅供参考，请以实际场地为准</p>
         </div>
     </div>
 </body>
