@@ -76,7 +76,7 @@
         
         .plans-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
             margin-bottom: 40px;
         }
@@ -94,7 +94,7 @@
         }
         
         .plan-image {
-            height: 250px;
+            height: 220px;
             background-size: cover;
             background-position: center;
             position: relative;
@@ -132,40 +132,40 @@
         }
         
         .plan-content {
-            padding: 30px;
+            padding: 25px;
         }
         
         .plan-title {
-            font-size: 1.8em;
+            font-size: 1.6em;
             color: #333;
             margin-bottom: 5px;
         }
         
         .plan-subtitle {
             color: #666;
-            font-size: 1em;
+            font-size: 0.95em;
             margin-bottom: 20px;
         }
         
         .plan-details {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-bottom: 25px;
+            gap: 12px;
+            margin-bottom: 20px;
         }
         
         .detail-item {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
         
         .detail-icon {
-            font-size: 1.3em;
+            font-size: 1.2em;
         }
         
         .detail-text {
-            font-size: 0.95em;
+            font-size: 0.9em;
             color: #555;
         }
         
@@ -177,15 +177,15 @@
         .features {
             background: #f8f9fa;
             border-radius: 12px;
-            padding: 20px;
+            padding: 18px;
             margin-bottom: 20px;
         }
         
         .features-title {
-            font-size: 1.1em;
+            font-size: 1em;
             font-weight: bold;
             color: #333;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -196,11 +196,12 @@
         }
         
         .features-list li {
-            padding: 8px 0;
+            padding: 6px 0;
             color: #555;
+            font-size: 0.9em;
             display: flex;
             align-items: flex-start;
-            gap: 10px;
+            gap: 8px;
         }
         
         .features-list li::before {
@@ -213,38 +214,38 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border-radius: 12px;
-            padding: 20px;
+            padding: 18px;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
         
         .price-label {
-            font-size: 0.9em;
+            font-size: 0.85em;
             opacity: 0.9;
             margin-bottom: 5px;
         }
         
         .price-value {
-            font-size: 2em;
+            font-size: 1.8em;
             font-weight: bold;
         }
         
         .price-per {
-            font-size: 0.9em;
+            font-size: 0.85em;
             opacity: 0.8;
         }
         
         .contact-btn {
             display: block;
             width: 100%;
-            padding: 15px;
+            padding: 13px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-align: center;
             text-decoration: none;
             border-radius: 12px;
             font-weight: bold;
-            font-size: 1.1em;
+            font-size: 1em;
             transition: opacity 0.3s ease;
             border: none;
             cursor: pointer;
@@ -266,7 +267,7 @@
         .comparison-table h2 {
             text-align: center;
             color: #333;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             font-size: 1.8em;
         }
         
@@ -276,25 +277,21 @@
         }
         
         th, td {
-            padding: 15px;
+            padding: 12px 10px;
             text-align: left;
             border-bottom: 1px solid #eee;
+            font-size: 0.9em;
         }
         
         th {
             background: #f8f9fa;
             font-weight: bold;
             color: #333;
-            font-size: 1.1em;
+            font-size: 1em;
         }
         
         tr:hover {
             background: #f8f9fa;
-        }
-        
-        .highlight {
-            background: #fff3cd;
-            font-weight: bold;
         }
         
         .best {
@@ -319,7 +316,7 @@
         
         .rec-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
         }
         
@@ -327,15 +324,15 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border-radius: 15px;
-            padding: 25px;
+            padding: 22px;
         }
         
         .rec-card h3 {
-            font-size: 1.3em;
-            margin-bottom: 15px;
+            font-size: 1.2em;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
         
         .rec-card ul {
@@ -343,10 +340,11 @@
         }
         
         .rec-card li {
-            padding: 8px 0;
+            padding: 6px 0;
+            font-size: 0.9em;
             display: flex;
             align-items: flex-start;
-            gap: 10px;
+            gap: 8px;
         }
         
         .rec-card li::before {
@@ -363,7 +361,7 @@
         
         @media (max-width: 768px) {
             .header h1 {
-                font-size: 1.8em;
+                font-size: 1.6em;
             }
             
             .plans-grid {
@@ -376,7 +374,7 @@
             
             .info-bar {
                 flex-direction: column;
-                gap: 20px;
+                gap: 15px;
             }
         }
     </style>
@@ -385,7 +383,7 @@
     <div class="container">
         <div class="header">
             <h1>🎉 NPI_TB 团建聚餐方案对比</h1>
-            <div class="subtitle">高端精选 · 预算 8000-10000 元</div>
+            <div class="subtitle">四家精选餐厅 · 预算 8000-10000 元</div>
             <p>浦江科技广场 16 号楼 · 5 公里内 · 40 人规模</p>
         </div>
         
@@ -419,8 +417,8 @@
                     <span class="plan-badge recommended">⭐ 热门推荐</span>
                 </div>
                 <div class="plan-content">
-                    <h3 class="plan-title">曼芯馆艺术餐厅（浦江镇店）</h3>
-                    <p class="plan-subtitle">精品融合菜/粤菜/本帮菜 · 艺术空间</p>
+                    <h3 class="plan-title">曼芯馆艺术餐厅</h3>
+                    <p class="plan-subtitle">精品融合菜/粤菜 · 艺术空间</p>
                     
                     <div class="plan-details">
                         <div class="detail-item">
@@ -433,7 +431,7 @@
                         </div>
                         <div class="detail-item">
                             <span class="detail-icon">🚗</span>
-                            <span class="detail-text"><span class="detail-label">距离：</span>2.5 公里 (8 分钟)</span>
+                            <span class="detail-text"><span class="detail-label">距离：</span>2.5km (8 分钟)</span>
                         </div>
                         <div class="detail-item">
                             <span class="detail-icon">⭐</span>
@@ -469,7 +467,7 @@
                 </div>
                 <div class="plan-content">
                     <h3 class="plan-title">梦花源主题创意餐厅</h3>
-                    <p class="plan-subtitle">本帮创意菜/农家菜 · 生态公园</p>
+                    <p class="plan-subtitle">本帮创意菜 · 生态公园</p>
                     
                     <div class="plan-details">
                         <div class="detail-item">
@@ -482,7 +480,7 @@
                         </div>
                         <div class="detail-item">
                             <span class="detail-icon">🚗</span>
-                            <span class="detail-text"><span class="detail-label">距离：</span>4 公里 (12 分钟)</span>
+                            <span class="detail-text"><span class="detail-label">距离：</span>4km (12 分钟)</span>
                         </div>
                         <div class="detail-item">
                             <span class="detail-icon">⭐</span>
@@ -518,7 +516,7 @@
                 </div>
                 <div class="plan-content">
                     <h3 class="plan-title">彩丰楼中餐厅</h3>
-                    <p class="plan-subtitle">粤菜/本帮融合菜 · 皇冠假日酒店</p>
+                    <p class="plan-subtitle">粤菜/本帮融合 · 皇冠假日酒店</p>
                     
                     <div class="plan-details">
                         <div class="detail-item">
@@ -531,7 +529,7 @@
                         </div>
                         <div class="detail-item">
                             <span class="detail-icon">🚗</span>
-                            <span class="detail-text"><span class="detail-label">距离：</span>1.5 公里 (5 分钟)</span>
+                            <span class="detail-text"><span class="detail-label">距离：</span>1.5km (5 分钟)</span>
                         </div>
                         <div class="detail-item">
                             <span class="detail-icon">⭐</span>
@@ -559,6 +557,55 @@
                     <a href="tel:02133293765" class="contact-btn">📞 立即预订</a>
                 </div>
             </div>
+            
+            <!-- 方案四：德莱福潮宴 -->
+            <div class="plan-card">
+                <div class="plan-image" style="background-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&h=500&fit=crop');">
+                    <span class="plan-badge recommended">🆕 潮汕菜</span>
+                </div>
+                <div class="plan-content">
+                    <h3 class="plan-title">德莱福潮宴</h3>
+                    <p class="plan-subtitle">潮汕菜/粤菜 · 城际酒店</p>
+                    
+                    <div class="plan-details">
+                        <div class="detail-item">
+                            <span class="detail-icon">📍</span>
+                            <span class="detail-text"><span class="detail-label">地址：</span>竹园路 559 号 8 幢 1F</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">📞</span>
+                            <span class="detail-text"><span class="detail-label">电话：</span>180 0172 8280</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">🚗</span>
+                            <span class="detail-text"><span class="detail-label">距离：</span>2.5km (8 分钟)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">⭐</span>
+                            <span class="detail-text"><span class="detail-label">评分：</span>4.5+ 分</span>
+                        </div>
+                    </div>
+                    
+                    <div class="features">
+                        <div class="features-title">✨ 核心优势</div>
+                        <ul class="features-list">
+                            <li>城际酒店内，高端潮汕菜</li>
+                            <li>粤菜 + 潮汕菜，食材新鲜</li>
+                            <li>酒店配套，环境优雅</li>
+                            <li>适合商务宴请、团建聚餐</li>
+                            <li>停车位充足</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="price-box">
+                        <div class="price-label">预估总费用</div>
+                        <div class="price-value">¥9,200</div>
+                        <div class="price-per">人均约 ¥230</div>
+                    </div>
+                    
+                    <a href="tel:18001728280" class="contact-btn">📞 立即预订</a>
+                </div>
+            </div>
         </div>
         
         <!-- 对比表格 -->
@@ -571,6 +618,7 @@
                         <th>曼芯馆</th>
                         <th>梦花源</th>
                         <th>彩丰楼</th>
+                        <th>德莱福</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -579,60 +627,70 @@
                         <td class="best">¥8,000 ⭐</td>
                         <td>¥9,600</td>
                         <td>¥12,000</td>
+                        <td>¥9,200</td>
                     </tr>
                     <tr>
                         <td><strong>人均消费</strong></td>
                         <td class="best">¥200 ⭐</td>
                         <td>¥240</td>
                         <td>¥300</td>
+                        <td>¥230</td>
                     </tr>
                     <tr>
                         <td><strong>距离公司</strong></td>
                         <td>2.5km</td>
                         <td>4km</td>
                         <td class="best">1.5km ⭐</td>
+                        <td>2.5km</td>
                     </tr>
                     <tr>
                         <td><strong>环境档次</strong></td>
                         <td class="best">艺术空间 ⭐</td>
                         <td>花园公园</td>
                         <td>五星酒店</td>
+                        <td>高端酒店</td>
                     </tr>
                     <tr>
                         <td><strong>包间容量</strong></td>
                         <td class="best">24 人 (需 2 间)</td>
                         <td>需确认</td>
                         <td>20 人 + 连通</td>
+                        <td>需确认</td>
                     </tr>
                     <tr>
                         <td><strong>娱乐配套</strong></td>
                         <td class="best">KTV+ 包厢 🎤</td>
                         <td>花园游览 🌿</td>
                         <td>无</td>
+                        <td>无</td>
                     </tr>
                     <tr>
                         <td><strong>菜系</strong></td>
-                        <td>融合菜/粤菜/本帮</td>
-                        <td class="best">本帮创意菜 ⭐</td>
-                        <td>粤菜/本帮融合</td>
+                        <td>融合菜/粤菜</td>
+                        <td>本帮创意菜</td>
+                        <td>粤菜/本帮</td>
+                        <td class="best">潮汕菜/粤 ⭐</td>
                     </tr>
                     <tr>
                         <td><strong>大众点评</strong></td>
                         <td class="best">4.8+ 分 ⭐</td>
                         <td>4.5+ 分</td>
                         <td>4.6 分</td>
+                        <td>4.5+ 分</td>
                     </tr>
                     <tr>
                         <td><strong>停车位</strong></td>
                         <td class="best">2000 个</td>
                         <td>免费停车</td>
                         <td>酒店配套</td>
+                        <td>酒店配套</td>
                     </tr>
                     <tr>
                         <td><strong>特色体验</strong></td>
                         <td>KTV 娱乐</td>
-                        <td class="best">花园 + 美食 ⭐</td>
+                        <td>花园 + 美食</td>
                         <td>商务正式</td>
+                        <td>潮汕风味</td>
                     </tr>
                 </tbody>
             </table>
@@ -670,6 +728,16 @@
                         <li>商务宴请级别</li>
                         <li>预算 12000 元（超预算）</li>
                         <li>适合正式场合</li>
+                    </ul>
+                </div>
+                <div class="rec-card">
+                    <h3>🦞 想要特色风味</h3>
+                    <ul>
+                        <li>选择 <strong>德莱福</strong></li>
+                        <li>高端潮汕菜</li>
+                        <li>酒店配套完善</li>
+                        <li>预算 9200 元（适中）</li>
+                        <li>适合品尝海鲜</li>
                     </ul>
                 </div>
             </div>
